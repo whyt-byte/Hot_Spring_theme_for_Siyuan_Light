@@ -1,0 +1,212 @@
+/*温泉（暗） for 思源。Flying fly flies出品，[20201011] https://github.com/whyt-byte*/
+/*Hot Spring dark for Siyuan. Created by Flying fly flies, [20201011] find more: https://github.com/whyt-byte*/
+/*feel free to use and modify*/ 
+
+:root {
+    /* 主色 */
+    --b3-theme-primary: #ff4b4b;
+    --b3-theme-primary-light: rgba(255, 130, 130, 0.35);
+    --b3-theme-primary-lighter: rgba(255, 130, 130, 0.2);
+    --b3-theme-primary-lightest: rgba(255, 130, 130, 0.10);
+    --b3-theme-secondary: #f3a92f; /* unused */
+    --b3-theme-background: #2b2b2b;
+    --b3-theme-surface: #0f0f0f;
+    --b3-theme-error: #d23f31; /* unused */
+
+    /* 文字颜色 */
+    --b3-theme-on-primary: rgb(37, 114, 214);
+    --b3-theme-on-secondary: #fff; /* unused */
+    --b3-theme-on-background: #a7a7a7;
+    --b3-theme-on-surface: #5f6368;
+    --b3-theme-on-error: rgb(165, 19, 19);
+
+    /* 字体 */
+    --b3-font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB", "Microsoft Yahei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
+    --b3-font-family-code: mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
+
+    /* 线条 */
+    --b3-border-color: rgba(255, 255, 255, 0.12);
+
+    /* 滚动条 */
+    --b3-scroll-color: rgba(255, 130, 130, 0.3);
+
+    /* 列表 */
+    --b3-list-hover: rgba(0, 0, 0, .06);
+
+    /* 提示 */
+    --b3-tooltips-color: rgba(0, 0, 0, 0.54);
+
+    /* 动画效果 */
+    --b3-transition: all .15s cubic-bezier(0, 0, .2, 1) 0ms;
+
+    /* 阴影 */
+    --b3-point-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    --b3-dialog-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+
+    /* diff */
+    --b3-diff-add: #133a1c;
+    --b3-diff-add-surface: #28853e;
+    --b3-diff-del: #440c10;
+    --b3-diff-del-surface: #b1202d;
+    
+    /* 编辑器工具栏高度 */
+    --b3-vditor-toolbar-height: 35px;
+    --b3-vditor-toolbar-height-space: 8px;
+
+    /* 即时渲染标记符颜色 */
+    --b3-vditor-mark-heading-color: #ee4646;
+    --b3-vditor-mark-title-color: #808080;
+    --b3-vditor-mark-paren-color: #008000;
+    --b3-vditor-mark-em-color: #cc7832;
+    --b3-vditor-mark-strong-color: #cc7832;
+    --b3-vditor-mark-backslash-color: #cc7832;
+    --b3-vditor-mark-s-color: #9aa0a6;
+    --b3-vditor-mark-mark-color: #9aa0a6;
+    --b3-vditor-mark-link-color: #ffc66d;
+    --b3-vditor-mark-bracket-color: #287bde;
+    --b3-vditor-mark-block-color: #9876aa;
+
+    --h1-color: #c2282d;
+    --h2-color: #cc393d;
+    --h3-color: #d65043;
+    --h4-color: #e05f42;
+    --h5-color: #fc9272;
+    --h6-color: #cf9882;
+
+    --file-list-background: #da3939bb;
+    --file-list-background-files: #eb636367;
+    --workplace-markdown: #007ec2;
+    --layout-tabbar: #afafaf;
+    --blockquote-color: #1d1d1d;
+    --link-color: #d1b200;
+
+    /* 图表颜色 */
+    --b3-graph-line: #725353;
+    --b3-graph-hl-point: #008ada;
+    --circle-color: #d86262;
+    --line-color: #b3c700;
+    --b3-graph-hl-line: #b3c700;
+ 
+}
+
+/*目录栏*/
+.b3-list--background .b3-list-item--focus{
+ background-color: var(--file-list-background) !important;
+}
+
+.b3-list--background .b3-list-item--focus .b3-list-item__text, .b3-list--background .b3-list-item--focus .b3-list-item__graphic{
+    color: white !important;
+}
+
+li.b3-list-item.b3-list-item--hide-action:hover{
+    background-color: var(--file-list-background-files);
+}
+
+.toolbar__item:hover{
+    color: var(--b3-theme-primary);
+}
+
+.ft__primary:hover{
+    transform: scale(1.5);
+}
+
+.b3-list-item__text {
+    display: initial;
+    line-height: 1.2;
+}
+
+.b3-list-item {
+    padding: 6px 5px;
+}
+
+/*页面标签栏*/
+.layout-tab-bar .item--focus {
+    background-color: var(--file-list-background-files) !important;
+    border-color: var(--b3-theme-primary);
+    color: white !important;
+}
+
+.layout-tab-bar .item--focus:hover {
+    background-color: var(--file-list-background-files);
+}
+
+.layout-tab-bar .item {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 5px;
+    color: var(--layout-tabbar);
+}
+
+
+/*设置页面*/
+.vditor-reset code:not(.hljs):not(.highlight-chroma) {
+    background-color:rgba(175, 94, 94, 0.5) !important;
+}
+
+.b3-list--background .b3-list-item--focus {
+    color: white;
+}
+
+
+/*工作区*/
+.vditor-ir__link {
+    color: var(--link-color);
+}
+
+.vditor-reset {
+    color: #cacaca !important;
+}
+
+strong {
+    color: rgb(236, 236, 236);
+}
+
+blockquote {
+    border-left: 5px solid !important;
+    border-color: var(--b3-theme-primary) !important;
+    background-color: var(--blockquote-color);
+    color: #b4b4b4 !important;
+    padding: 10px 10px 10px 15px !important;
+}
+
+.vditor-reset pre>code{
+    border: 2px solid;
+    border-color: var(--b3-theme-primary);
+}
+
+.hljs-bullet, .hljs-quote, .hljs-link, .hljs-number, .hljs-regexp, .hljs-literal {
+    color: #c28989 !important;
+}    
+
+/*md语法*/
+.vditor-ir__node .vditor-ir__marker {
+    color: var(--workplace-markdown);
+}
+
+/*标题*/
+.vditor-reset h1{
+    color: var(--h1-color);
+}
+.vditor-reset h2{
+    color: var(--h2-color);
+}
+.vditor-reset h3{
+    color: var(--h3-color);
+}
+.vditor-reset h4{
+    color: var(--h4-color);
+}
+.vditor-reset h5{
+    color: var(--h5-color);
+}
+.vditor-reset h6{
+    color: var(--h6-color);
+}
+
+/*关系图*/
+.graph circle{
+    color: var(--circle-color);
+}
+
+.graph line{
+    color: var(--line-color);
+}
