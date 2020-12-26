@@ -26,7 +26,7 @@
     --b3-font-family-code: mononoki, Consolas, "Liberation Mono", Menlo, Courier, monospace, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", "EmojiSymbols";
 
     /* 线条 */
-    --b3-border-color: #ffffff1f;
+    --b3-border-color: #bebebe65;
 
     /* 滚动条 */
     --b3-scroll-color: rgba(255, 130, 130, 0.3);
@@ -189,9 +189,11 @@ blockquote {
 /*标题*/
 .vditor-reset h1{
     color: var(--h1-color);
+    border-bottom: 2px solid;
 }
 .vditor-reset h2{
     color: var(--h2-color);
+    border-bottom: 1px solid;
 }
 .vditor-reset h3{
     color: var(--h3-color);
@@ -218,4 +220,26 @@ blockquote {
 /*table*/
 .vditor-reset table td, .vditor-reset table th {
     border: 1px solid gray;
+}
+
+
+/*列表*/
+
+/*简单竖线*/
+ul,
+ol,
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+    list-style-position: inside;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+    content:'';
+    border-left: 2px solid var(--b3-theme-surface);
+    margin-left: 0.3em;
 }
